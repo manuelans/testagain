@@ -90,7 +90,7 @@ var createScene = function () {
   var scene = new BABYLON.Scene(engine);
   var camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 10, BABYLON.Vector3.Zero(), scene);
   var light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0), scene);
-  BABYLON.SceneLoader.ImportMesh("", "", "PaleHalle6_s.stl", scene, function (newMeshes) {
+  BABYLON.SceneLoader.ImportMesh("", "./", "PaleHalle6_s.stl", scene, function (newMeshes) {
     scene.createDefaultCameraOrLight(true, true, true);
     scene.activeCamera.alpha += Math.PI;
     scene.activeCamera.beta += Math.PI / 2;

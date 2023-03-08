@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mon site web - Accueil</title>
+	<style>
+		body {
+			background-image: url(background.jpg);
+			background-size: cover;
+		}
+		#header {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100px;
+			background-color: rgba(0, 0, 0, 0.5);
+		}
+		#logo {
+			height: 80%;
+		}
+		#content {
+			position: absolute;
+			top: 50%;
+			left: 150px;
+			transform: translateY(-50%);
+			padding: 20px;
+			color: white;
+			background-color: rgba(0, 0, 0, 0.5);
+			width: 400px;
+			height: 300px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+		}
+		#content h1 {
+			margin: 0;
+			font-size: 32px;
+			font-weight: normal;
+			text-align: center;
+		}
+		#content p {
+			margin: 20px 0;
+			font-size: 18px;
+			line-height: 1.5;
+			text-align: center;
+		}
+		#button {
+			margin-top: 20px;
+			align-self: flex-end;
+			background-color: white;
+			color: black;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		
+		}
+		#model-container {
+		  width: 500px;
+ 		  height: 500px;
+		}
+	</style>
+
+
+</head>
+<body>
+
+	<img id="logo" src="logo.png" alt="Logo du site">
+	<div id="content">
+		<h1>Bienvenue sur mon site web</h1>
+		<p>Ceci est un exemple de site web avec une image de fond, une image en haut à gauche, une boîte de texte à gauche et un bouton qui dirige vers une deuxième page contenant la même chose avec une boîte de texte différente et un bouton pour revenir à la page d'accueil. holaaaaaaaaaaaa</p>
+		<button id="button" onclick="window.location.href='page2.html'">Page 2</button>
+	
+
+	
+	</div>
+
+<div id="model-container"></div>
+<script src="https://cdn.babylonjs.com/babylon.js"></script>
+<script src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+<script>
+var canvas = document.createElement("canvas");
+document.getElementById("model-container").appendChild(canvas);
+var engine = new BABYLON.Engine(canvas, true);
+var createScene = function () {
+  var scene = new BABYLON.Scene(engine);
+  var camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 10, BABYLON.Vector3.Zero(), scene);
+  var light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0), scene);
+  BABYLON.SceneLoader.ImportMesh("", "C:/Users/manue/OneDrive/Documents/pagin/Site maquette-20230307T221112Z-001/", "PaleHalle6.stl", scene, function (newMeshes) {
+    scene.createDefaultCameraOrLight(true, true, true);
+    scene.activeCamera.alpha += Math.PI;
+    scene.activeCamera.beta += Math.PI / 2;
+    scene.activeCamera.radius = 2;
+  });
+  return scene;
+};
+var scene = createScene();
+engine.runRenderLoop(function () {
+  scene.render();
+});
+window.addEventListener("resize", function () {
+  engine.resize();
+});
+</script>
+
+</body>
+</html>

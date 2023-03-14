@@ -59,8 +59,19 @@
 			border-radius: 5px;
 			cursor: pointer;
 		}
+		#content2 {
+			position: absolute;
+			top: 50%;
+			right: 150px;
+			transform: translateY(-50%);
+			padding: 20px;
+			color: white;
+			font-size: 16.5px;
+			line-height: 1.5;
+			text-align: center;
+		}
 	</style>
-	<link rel="icon" href="logo.png">
+	<link rel="icon" href="logo_noir.png">
 </head>
 <body>
 	<img id="logo" src="logo.png" alt="Logo du site">
@@ -75,6 +86,13 @@ Vous souhaitez en savoir plus ? <a href="https://journals.openedition.org/insitu
 
 		<button id="button1" onclick="window.location.href='page3.html'">Que signifient ces inscriptions ?</button>
 		<button id="button2" onclick="window.location.href='index.html'">Retourner à l'accueil</button>
+	</div>
+
+	<div id="content2">
+		<img id="fonderies_atlantique" src="images/fonderies_atlantique.jpg" alt="Anciennes Fonderies de l'Atlantique" height="265" width="300">
+		<p> Anciennes Fonderies de l'Atlantique </p>
+		<img id="paquebot_france" src="images/paquebot_france.jpg" alt="Paquebot France" height="265" width="265">
+		<p> Paquebot 'France' </p>
 	</div>
 </body>
 </html>

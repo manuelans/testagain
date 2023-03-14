@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mon site web - Page 2</title>
+	<style>
+		body {
+			background-image: url(background_halle6_crop.png);
+			background-size: cover;
+			margin: 0;
+			padding: 0;
+		}
+		header {
+			background-color: rgba(0, 0, 0, 0.5);
+			height: 80px;
+			line-height: 80px;
+			text-align: center;
+		}
+		#logo {
+			display: inline-block;
+			vertical-align: middle;
+			height: 50px;
+			margin: 0;
+			padding: 0;
+		}
+		#content {
+			position: absolute;
+			top: 50%;
+			left: 150px;
+			transform: translateY(-50%);
+			padding: 20px;
+			color: white;
+			background-color: rgba(0, 0, 0, 0.5);
+			width: 400px;
+			height: 650px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: flex-start;
+		}
+		#content h1 {
+			margin: 0;
+			font-size: 32px;
+			font-weight: normal;
+			text-align: center;
+		}
+		#content p {
+			margin: 20px 0;
+			font-size: 16.5px;
+			line-height: 1.5;
+			text-align: left;
+		}
+		#button {
+			margin-top: 20px;
+			align-self: flex-end;
+			background-color: white;
+			color: black;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<img id="logo" src="logo.png" alt="Logo du site">
+	<div id="content">
+		<h1>Chef-modèles de pales d’hélices de bateau</h1>
+		<p>Les chefs-modèles, plongés dans les moules en sable, définissent la forme souhaitée. Le matériau choisi pour les pales est ensuite coulé dans les moules. Les pales sont ensuite meulées jusqu’à ce que leurs dimensions soient satisfaisantes. </p>
+
+<p>La pale en forme d’aileron de requin, à gauche (forme développée dans les années 70), est recouverte d’inscriptions et d’ajouts de matière. Ces altérations viennent probablement de la personne qui meulait les pales, et qui indiquait les corrections faites sur la pale, pour améliorer le chef-modèle.</p>
+
+En haut de chacune des pales, on peut voir les ajouts pour les crochets de manutention, qui permettent de manipuler les pales et de les déplacer. Cette petite partie est enlevée une fois que la pale est installée. </p>
+
+<p>Le procédé de fonte au sable est encore utilisé aujourd’hui, notamment au lieu actuel des fonderies, dans le quartier Chantenay.</p>
+
+
+<p>Vous souhaitez en savoir plus ? <a href="https://journals.openedition.org/insitu/4266">Cliquez sur ce lien</a></p>
+
+		<button id="button1" onclick="window.location.href='page2.html'">Pourquoi ces pales sont-elles ici ?</button>
+		<button id="button2" onclick="window.location.href='index.html'">Retourner à l'accueil</button>
+	</div>
+</body>
+</html>
